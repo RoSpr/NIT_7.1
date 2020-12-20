@@ -17,21 +17,25 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-95-mtm">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                        <rect key="frame" x="30" y="30" width="120" height="120"/>
                         <color key="backgroundColor" red="0.94737468270000003" green="0.89965663510000005" blue="0.6016116588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="mGn-1H-4Rz"/>
+                            <constraint firstAttribute="height" constant="120" id="skI-Ht-nF5"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="wCd-95-mtm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Aqc-21-SRq"/>
-                <constraint firstAttribute="trailing" secondItem="wCd-95-mtm" secondAttribute="trailing" id="Tm8-i8-7vu"/>
-                <constraint firstItem="wCd-95-mtm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hZt-Ba-V4Z"/>
-                <constraint firstAttribute="bottom" secondItem="wCd-95-mtm" secondAttribute="bottom" id="r91-YD-QAl"/>
+                <constraint firstItem="wCd-95-mtm" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="3Xw-pv-JFd"/>
+                <constraint firstItem="wCd-95-mtm" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gZu-Oe-dkN"/>
             </constraints>
             <size key="customSize" width="180" height="180"/>
             <connections>
+                <outlet property="heightConstraint" destination="skI-Ht-nF5" id="rSF-MP-I0U"/>
                 <outlet property="imageView" destination="wCd-95-mtm" id="h4B-qf-0CI"/>
+                <outlet property="widthConstraint" destination="mGn-1H-4Rz" id="pvA-Hs-Vgb"/>
             </connections>
             <point key="canvasLocation" x="234.78260869565219" y="137.27678571428569"/>
         </collectionViewCell>

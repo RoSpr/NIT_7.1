@@ -53,8 +53,9 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionCell", for: indexPath) as! CustomCollectionViewCell
+        
         let width = self.view.frame.width / 3 - 10
-        cell.imageView.frame.size = CGSize(width: width, height: width)
+        cell.updateCellSize(width: width, height: width)
         
         if imageURLs.count != 0 {
             if let imageUrl = URL(string: imageURLs[indexPath.item].url) {

@@ -11,8 +11,15 @@ class CustomCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
+    func updateCellSize(width: CGFloat, height: CGFloat) {
+        widthConstraint.constant = width
+        heightConstraint.constant = height
+    }
 }
